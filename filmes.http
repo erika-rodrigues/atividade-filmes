@@ -1,0 +1,40 @@
+### MOSTRAR TODOS OS FILMES
+
+GET http://localhost:3000/filmes
+
+
+###
+
+### ADICIONAR FILME
+
+POST http://localhost:3000/filmes
+Content-Type: application/json
+
+{
+    "titulo": "Homem-Aranha",
+    "genero": "Ação",
+    "duracao": 121,
+    "classificacao": 12
+}
+
+
+###
+
+### EDITAR FILME
+
+PUT http://localhost:3000/filmes/1
+Content-Type: application/json
+
+{
+    "titulo": "Interestelar",
+    "genero": "Ficção Científica",
+    "duracao": 169,
+    "classificacao": 12
+}
+
+
+###
+
+### APAGAR FILME
+
+DELETE http://localhost:3000/filmes/12
