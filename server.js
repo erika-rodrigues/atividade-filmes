@@ -1,11 +1,28 @@
 const express = require('express');
 const cors = require('cors');
+const mysql = require('mysql2');
+
 const app = express();
-const connection = require('./mysql');
 
 // Middlewares
 app.use(cors());
 app.use(express.json());
+
+// Conexão com o Banco de Dados
+const connection = mysql.createConnection({
+    host: 'benserverplex.ddns.net',
+    user: 'alunos',
+    password: 'senhaAlunos',
+    database: 'alunos_filmes03MC'
+});
+
+connection.connect((erro) => {
+    if (erro) {
+        console.log("Erro ao conectar:", erro);
+    } else {
+        console.log("Banco conectado!");
+    }
+});
 
 // GET - MOSTRAR TODOS OS FILMES
 app.get('/filmes', (req, res) => {
@@ -82,7 +99,6 @@ app.delete('/filmes/:id', (req, res) => {
     );
 });
 
-// SERVIDOR
 app.listen(3000, () => {
     console.log('Servidor rodando na porta 3000');
-}); 
+});
