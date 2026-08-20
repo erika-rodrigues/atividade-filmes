@@ -1,6 +1,6 @@
 ### MOSTRAR TODOS OS FILMES
 
-GET http://localhost:3000/filmes
+GET https://atividade-filmes-backend.vercel.app/filmes
 
 
 ###
