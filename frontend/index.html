@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Lista de Filmes</title>
+</head>
+
+<body>
+
+    <h1>Cadastrar Filme</h1>
+            <form id="form-filme">
+        <input type="text" id="titulo" placeholder="Título" required>
+        <input type="text" id="genero" placeholder="Gênero" required>
+        <input type="number" id="duracao" placeholder="Duração (min)" required>
+        <input type="number" id="classificacao" placeholder="Classificação (idade)" required>
+        <button type="submit">Salvar Filme</button>
+    </form>
+
+    <h1>Lista de Filmes</h1>
+    <section class="filmes"></section>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
